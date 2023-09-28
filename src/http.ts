@@ -6,7 +6,9 @@ const PORT: number = 3001
 const app = express();
 const httpServer = http.createServer(app);
 
-const io = new Server(httpServer)
+const io = new Server(httpServer, {
+  transports: ['websocket', 'polling'], // Permite WebSocket e polling
+})
 
 export { httpServer,io}
 
