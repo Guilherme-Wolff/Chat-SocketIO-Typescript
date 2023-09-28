@@ -5,7 +5,10 @@ import cors from "cors"
 const PORT: number = 3001
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['*','https://seu-site1.com', 'https://seu-site2.com'],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+}));
 const httpServer = http.createServer(app);
 
 const io = new Server(httpServer, {
