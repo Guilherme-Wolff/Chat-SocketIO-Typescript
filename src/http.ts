@@ -11,7 +11,7 @@ app.use(cors({
 const httpServer = http.createServer(app);
 
 const io = new Server(httpServer, {
-  transports: ['websocket', 'polling'], // Permite WebSocket e polling
+  transports: ['polling'], // Permite WebSocket e polling
 })
 
 export { httpServer,io}
