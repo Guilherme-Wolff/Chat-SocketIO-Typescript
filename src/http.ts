@@ -6,8 +6,7 @@ const PORT: number = 3001
 
 const app = express();
 app.use(cors({
-  origin: ['*','https://nodejsclusters-147755-0.cloudclusters.net'],
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  origin: ['*','https://nodejsclusters-147755-0.cloudclusters.net']
 }));
 const httpServer = http.createServer(app);
 
